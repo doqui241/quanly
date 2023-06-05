@@ -19,7 +19,10 @@ class CreateThietbiTable extends Migration
             $table->string('tentb');
             $table->string('diachiip');
             $table->string('trangthaihd');
+            $table->string('username');
+            $table->string('password');
             $table->string('trangthaikn');
+            $table->string('dichvusd');
             $table->timestamps();
         });
     }

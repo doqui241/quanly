@@ -13,10 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ThietbiController;
+use App\Http\Controllers\DichvuController;
+use App\Http\Controllers\CapsoController;
+use App\Http\Controllers\BaocaoController;
+// use App\Http\Controllers\LoguotController;
 
 Route::resource('/login',UsersController::class);
+Route::resource('/dashboard',DashboardController::class);
+Route::resource('/thietbi',ThietbiController::class);
+Route::resource('/dichvu',DichvuController::class);
+Route::resource('/capso',CapsoController::class);
+Route::resource('/baocao',BaocaoController::class);
+// Route::resource('/baocao',HethongController::class);
+// Route::post('/loguot',LoguotController::class);
+
+// require __DIR__.'/auth.php';
 
 
 Route::get('/', function () {
-    return view('index');
+    return view('login.login');
 });
